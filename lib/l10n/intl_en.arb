@@ -1,0 +1,11 @@
+{
+  "@_APP": {},
+  "app_name": "Focus Now",
+  "app_title": "Focus Now",
+
+  "@_APP_HOME": {},
+  "app_bottom_bar_icon_home_name": "home",
+  "app_bottom_bar_icon_note_name": "note",
+  "app_bottom_bar_icon_statistics_name": "statistics",
+  "app_bottom_bar_icon_user_name": "user"
+}

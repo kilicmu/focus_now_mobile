@@ -1,0 +1,11 @@
+{
+  "@_APP": {},
+  "app_name": "此刻",
+  "app_title": "此刻",
+
+  "@_APP_HOME": {},
+  "app_bottom_bar_icon_home_name": "首页",
+  "app_bottom_bar_icon_note_name": "轻记",
+  "app_bottom_bar_icon_statistics_name": "统计",
+  "app_bottom_bar_icon_user_name": "用户"
+}
