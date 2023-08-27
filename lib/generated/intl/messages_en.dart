@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("statistics"),
         "app_bottom_bar_icon_user_name":
             MessageLookupByLibrary.simpleMessage("user"),
-        "app_name": MessageLookupByLibrary.simpleMessage("Focus Now"),
-        "app_title": MessageLookupByLibrary.simpleMessage("Focus Now")
+        "app_name": MessageLookupByLibrary.simpleMessage("FlowNow"),
+        "app_title": MessageLookupByLibrary.simpleMessage("FlowNow")
       };
 }

@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("统计"),
         "app_bottom_bar_icon_user_name":
             MessageLookupByLibrary.simpleMessage("用户"),
-        "app_name": MessageLookupByLibrary.simpleMessage("此刻"),
-        "app_title": MessageLookupByLibrary.simpleMessage("此刻")
+        "app_name": MessageLookupByLibrary.simpleMessage("如 流"),
+        "app_title": MessageLookupByLibrary.simpleMessage("如 流")
       };
 }

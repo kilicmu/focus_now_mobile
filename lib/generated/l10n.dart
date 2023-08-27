@@ -50,20 +50,20 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Focus Now`
+  /// `FlowNow`
   String get app_name {
     return Intl.message(
-      'Focus Now',
+      'FlowNow',
       name: 'app_name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Focus Now`
+  /// `FlowNow`
   String get app_title {
     return Intl.message(
-      'Focus Now',
+      'FlowNow',
       name: 'app_title',
       desc: '',
       args: [],
