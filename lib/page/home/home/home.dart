@@ -3,6 +3,9 @@ import 'package:focus_now_mobile/widgets/progress.dart';
 
 import 'SummaryTodayMessageWidget.dart';
 
+const double ONE_STACK_WIDTH = 14.0;
+const double CHART_SCOPE_SIZE = 140.0;
+
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
 
@@ -34,13 +37,32 @@ class _HomeWidgetState extends State<HomeWidget> {
                       flex: 11,
                       child: ConstrainedBox(
                         constraints: const BoxConstraints.expand(),
-                        child: const Stack(
+                        child: Stack(
                           alignment: Alignment.center,
                           children: [
-                            ProgressWidget(size: Size(140, 140)),
                             ProgressWidget(
-                                size: Size(
-                                    140.0 - 12.0 * 2 - 1, 140.0 - 12.0 * 2 - 1))
+                              size: const Size(
+                                  CHART_SCOPE_SIZE, CHART_SCOPE_SIZE),
+                              beginColor: Colors.redAccent,
+                              endColor: Colors.redAccent.withAlpha(156),
+                              percent: 1,
+                            ),
+                            ProgressWidget(
+                              size: const Size(
+                                  CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 2,
+                                  CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 2),
+                              beginColor: Colors.blue,
+                              endColor: Colors.blue.withAlpha(156),
+                              percent: 0.5,
+                            ),
+                            ProgressWidget(
+                              size: const Size(
+                                  CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 4,
+                                  CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 4),
+                              beginColor: Colors.greenAccent,
+                              endColor: Colors.greenAccent.withAlpha(156),
+                              percent: 1.7,
+                            )
                           ],
                         ),
                       )),

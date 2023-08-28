@@ -20,7 +20,7 @@ class FlowNowApp extends StatelessWidget {
             brightness: Brightness.dark,
             seedColor: const Color.fromRGBO(0xfb, 0x5d, 0x5d, 1),
             primary: const Color.fromRGBO(0xfb, 0x5d, 0x5d, 1),
-            secondary: const Color.fromRGBO(0x22, 0x53, 0x69, 0.9),
+            secondary: const Color.fromRGBO(0x6d, 0x8e, 0xa0, 0.2),
             secondaryContainer: const Color.fromRGBO(0xcf, 0xfd, 0xf8, 0.9)),
         scaffoldBackgroundColor: const Color.fromRGBO(0x38, 0x38, 0x38, 1),
         buttonTheme: const ButtonThemeData(
@@ -70,10 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Spacer(),
             Builder(builder: (context) {
               return GestureDetector(
-                  onTap: () {
-                    Scaffold.of(context).openDrawer();
-                  },
-                  child: CircleAvatar());
+                onTap: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                child: CircleAvatar(),
+              );
             })
           ],
         ),
