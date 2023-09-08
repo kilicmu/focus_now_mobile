@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:focus_now_mobile/generated/l10n.dart';
+import 'package:focus_now_mobile/widgets/gap.dart';
 import 'package:focus_now_mobile/widgets/progress.dart';
 
 import 'SummaryTodayMessageWidget.dart';
@@ -6,20 +8,20 @@ import 'SummaryTodayMessageWidget.dart';
 const double ONE_STACK_WIDTH = 14.0;
 const double CHART_SCOPE_SIZE = 140.0;
 
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
+const double SUMARRY_CARD_HEIGHT = 174.0;
+
+class TodayProgressWidget extends StatefulWidget {
+  const TodayProgressWidget({super.key});
 
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  State<TodayProgressWidget> createState() => _TodayProgressWidgetState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _TodayProgressWidgetState extends State<TodayProgressWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 200,
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+        height: SUMARRY_CARD_HEIGHT,
         child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
@@ -44,7 +46,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               size: const Size(
                                   CHART_SCOPE_SIZE, CHART_SCOPE_SIZE),
                               beginColor: Colors.redAccent,
-                              endColor: Colors.redAccent.withAlpha(156),
+                              endColor: Colors.redAccent.withAlpha(186),
                               percent: 1,
                             ),
                             ProgressWidget(
@@ -52,7 +54,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 2,
                                   CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 2),
                               beginColor: Colors.blue,
-                              endColor: Colors.blue.withAlpha(156),
+                              endColor: Colors.blue.withAlpha(186),
                               percent: 0.5,
                             ),
                             ProgressWidget(
@@ -60,7 +62,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 4,
                                   CHART_SCOPE_SIZE - ONE_STACK_WIDTH * 4),
                               beginColor: Colors.greenAccent,
-                              endColor: Colors.greenAccent.withAlpha(156),
+                              endColor: Colors.greenAccent.withAlpha(186),
                               percent: 1.7,
                             )
                           ],
@@ -71,5 +73,51 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ],
               ),
             )));
+  }
+}
+
+class HomeWidget extends StatefulWidget {
+  const HomeWidget({super.key});
+
+  @override
+  State<HomeWidget> createState() => _HomeWidgetState();
+}
+
+class _HomeWidgetState extends State<HomeWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+        child: Column(
+            children: [
+          const Row(children: [Expanded(child: TodayProgressWidget())]),
+          Row(
+            children: [
+              Expanded(
+                  child: FilledButton(
+                      onPressed: () {
+                        print("hello");
+                      },
+                      child: Text(
+                        S.of(context).home_my_today_button,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      )))
+            ],
+          ),
+          Expanded(
+              child: SingleChildScrollView(
+            child: Column(
+              children: [],
+            ),
+          ))
+        ].fold<List<Widget>>(
+                [],
+                (previousValue, element) => previousValue.isEmpty
+                    ? [element]
+                    : [
+                        ...previousValue,
+                        const Gap(size: Size.fromHeight(14.0)),
+                        element
+                      ])));
   }
 }

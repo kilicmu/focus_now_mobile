@@ -1,7 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:focus_now_mobile/generated/l10n.dart';
 
 TextStyle createSummaryTextStyleByColor(Color color) {
-  return TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 16);
+  return TextStyle(color: color, fontWeight: FontWeight.w700, fontSize: 14);
+}
+
+TextStyle createSummaryLabelStyleByColor(Color color) {
+  return TextStyle(color: color, fontWeight: FontWeight.w700, fontSize: 18);
+}
+
+class ArticlePercentText extends StatelessWidget {
+  const ArticlePercentText(
+      {super.key,
+      required this.text,
+      required this.label,
+      required this.color});
+
+  final String text;
+  final String label;
+  final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return Flex(
+      direction: Axis.horizontal,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          "$label:",
+          style: createSummaryTextStyleByColor(color),
+        ),
+        Container(width: 2),
+        Text(
+          text,
+          style: createSummaryLabelStyleByColor(color),
+        ),
+      ],
+    );
+  }
 }
 
 class SummaryOfChartMessage extends StatefulWidget {
@@ -21,18 +56,18 @@ class _SummaryOfChartMessageState extends State<SummaryOfChartMessage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text(
-            "8/16 任务完成",
-            style: createSummaryTextStyleByColor(Colors.redAccent),
-          ),
-          Text(
-            "1:22/1:00 专注时间",
-            style: createSummaryTextStyleByColor(Colors.blue),
-          ),
-          Text(
-            "8/10 专注周期",
-            style: createSummaryTextStyleByColor(Colors.greenAccent),
-          ),
+          ArticlePercentText(
+              text: '8/18',
+              label: S.of(context).home_summary_completed_projects_count,
+              color: Colors.redAccent),
+          ArticlePercentText(
+              text: '1:22/1:00',
+              label: S.of(context).home_summary_focus_time,
+              color: Colors.blue),
+          ArticlePercentText(
+              text: '8/10',
+              label: S.of(context).home_summary_finished_concentration_cycles,
+              color: Colors.greenAccent),
         ],
       ),
     );
@@ -74,7 +109,7 @@ class _SummaryTodayMessageWidgetState extends State<SummaryTodayMessageWidget> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      "日同比: ",
+                      "${S.of(context).home_summary_daily_year_on_year} ",
                       style: TextStyle(fontSize: 18),
                     ),
                     Text(

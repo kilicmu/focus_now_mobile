@@ -31,6 +31,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_bottom_bar_icon_user_name":
             MessageLookupByLibrary.simpleMessage("user"),
         "app_name": MessageLookupByLibrary.simpleMessage("FlowNow"),
-        "app_title": MessageLookupByLibrary.simpleMessage("FlowNow")
+        "app_title": MessageLookupByLibrary.simpleMessage("FlowNow"),
+        "home_my_today_button":
+            MessageLookupByLibrary.simpleMessage("One Day Of Mine"),
+        "home_summary_completed_projects_count":
+            MessageLookupByLibrary.simpleMessage("Completed"),
+        "home_summary_daily_year_on_year":
+            MessageLookupByLibrary.simpleMessage("Variation"),
+        "home_summary_finished_concentration_cycles":
+            MessageLookupByLibrary.simpleMessage("Concentration"),
+        "home_summary_focus_time": MessageLookupByLibrary.simpleMessage("Focus")
       };
 }

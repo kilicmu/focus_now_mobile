@@ -31,6 +31,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_bottom_bar_icon_user_name":
             MessageLookupByLibrary.simpleMessage("用户"),
         "app_name": MessageLookupByLibrary.simpleMessage("如 流"),
-        "app_title": MessageLookupByLibrary.simpleMessage("如 流")
+        "app_title": MessageLookupByLibrary.simpleMessage("如 流"),
+        "home_my_today_button": MessageLookupByLibrary.simpleMessage("我的一天"),
+        "home_summary_completed_projects_count":
+            MessageLookupByLibrary.simpleMessage("任务完成"),
+        "home_summary_daily_year_on_year":
+            MessageLookupByLibrary.simpleMessage("同日比"),
+        "home_summary_finished_concentration_cycles":
+            MessageLookupByLibrary.simpleMessage("专注周期"),
+        "home_summary_focus_time": MessageLookupByLibrary.simpleMessage("专注时间")
       };
 }

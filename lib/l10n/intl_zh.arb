@@ -7,5 +7,14 @@
   "app_bottom_bar_icon_home_name": "首页",
   "app_bottom_bar_icon_note_name": "轻记",
   "app_bottom_bar_icon_statistics_name": "统计",
-  "app_bottom_bar_icon_user_name": "用户"
+  "app_bottom_bar_icon_user_name": "用户",
+
+  "@_APP_HOME_SUMMARY": {},
+  "home_summary_completed_projects_count": "任务完成",
+  "home_summary_focus_time": "专注时间",
+  "home_summary_finished_concentration_cycles": "专注周期",
+  "home_summary_daily_year_on_year": "同日比",
+
+  "@_APP_HOME_BUTTON": {},
+  "home_my_today_button": "我的一天"
 }

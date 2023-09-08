@@ -109,6 +109,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Completed`
+  String get home_summary_completed_projects_count {
+    return Intl.message(
+      'Completed',
+      name: 'home_summary_completed_projects_count',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Focus`
+  String get home_summary_focus_time {
+    return Intl.message(
+      'Focus',
+      name: 'home_summary_focus_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Concentration`
+  String get home_summary_finished_concentration_cycles {
+    return Intl.message(
+      'Concentration',
+      name: 'home_summary_finished_concentration_cycles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Variation`
+  String get home_summary_daily_year_on_year {
+    return Intl.message(
+      'Variation',
+      name: 'home_summary_daily_year_on_year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One Day Of Mine`
+  String get home_my_today_button {
+    return Intl.message(
+      'One Day Of Mine',
+      name: 'home_my_today_button',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

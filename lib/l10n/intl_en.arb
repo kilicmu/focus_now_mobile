@@ -7,5 +7,14 @@
   "app_bottom_bar_icon_home_name": "home",
   "app_bottom_bar_icon_note_name": "note",
   "app_bottom_bar_icon_statistics_name": "statistics",
-  "app_bottom_bar_icon_user_name": "user"
+  "app_bottom_bar_icon_user_name": "user",
+
+  "@_APP_HOME_SUMMARY": {},
+  "home_summary_completed_projects_count": "Completed",
+  "home_summary_focus_time": "Focus",
+  "home_summary_finished_concentration_cycles": "Concentration",
+  "home_summary_daily_year_on_year": "Variation",
+
+  "@_APP_HOME_BUTTON": {},
+  "home_my_today_button": "One Day Of Mine"
 }
